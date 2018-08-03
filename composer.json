@@ -1,0 +1,50 @@
+{
+    "name": "laravel-notification-channels/corp-sms",
+    "description": "Corporate SMS notifications channel for Laravel 5.6+",
+    "keywords": ["laravel", "notifications", "smscentre", "corp-sms"],
+    "homepage": "https://github.com/mycools/laravel-notification-corp-sms",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jarak Kritkiattisak",
+            "role": "Developer",
+            "email": "jarak.krit@gmail.com",
+            "homepage": "https://github.com/mycools"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^6.2",
+        "illuminate/queue": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*",
+        "illuminate/notifications": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*",
+        "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.2",
+        "mockery/mockery": "^0.9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotificationChannels\\CorpSMS\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NotificationChannels\\CorpSMS\\Test\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotificationChannels\\CorpSMS\\CorpSMSRuServiceProvider"
+            ]
+        }
+    }
+}
