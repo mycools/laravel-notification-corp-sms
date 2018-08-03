@@ -34,6 +34,7 @@ class CorpSMSMessage
      */
     public static function create($content = '')
     {
+
         return new static($content);
     }
 
