@@ -91,7 +91,7 @@ class CorpSMSApi
             if (intval($response->STATUS) != 000) {
                 throw new \DomainException($response->DETAIL, 500);
             }
-            dd($response);
+            //dd($response);
             return $response;
         } catch (\DomainException $exception) {
             throw CouldNotSendNotification::smscRespondedWithAnError($exception);
